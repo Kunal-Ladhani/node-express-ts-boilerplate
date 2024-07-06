@@ -4,7 +4,7 @@ exports.healthCheck = void 0;
 const logger_1 = require("../utils/logger");
 const healthCheck = async (_req, res) => {
     logger_1.logger.info('Server is working');
-    res.send('Server is working');
+    res.status(200).json({ message: 'Server is working' });
 };
 exports.healthCheck = healthCheck;
 //# sourceMappingURL=healthCheck.js.map

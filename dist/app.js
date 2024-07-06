@@ -26,7 +26,7 @@ app.use(body_parser_1.default.json({ limit: '10mb' }));
 app.use(body_parser_1.default.urlencoded({ limit: '10mb', extended: true }));
 app.use((0, cookie_parser_1.default)());
 app.use((0, cors_1.default)());
-app.get('/', routes_1.healthCheckRoute);
+app.use(routes_1.healthCheckRoute);
 app.use((_req, _res, next) => {
     next((0, http_errors_1.default)(404));
 });
